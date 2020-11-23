@@ -16,15 +16,14 @@
   }
   .logo {
     max-width: 180px;
-    transition: opacity 0.3s linear;
+    transition: opacity 0.3s;
     &:hover {
-      opacity: 0.7;
+      opacity: 0.6;
     }
   }
 }
 
 .menu {
-  
   display: flex;
   justify-content: space-between;
   &__list {
@@ -36,8 +35,9 @@
   &__link {
     font-family: 'Alcotton', serif;
     color: #fff;
+    transition: color 0.3s;
     &:hover {
-      opacity: 0.5;
+      color: #ccc;
     }
   }
 }
@@ -45,13 +45,13 @@
 //*~~~~~~~~ Social ~~~~~~~~
 .social {
   &__link {
-    transition: opacity 0.3s linear;
+    transition: opacity 0.3s;
     display: inline-block;
     & + .social__link {
       margin-left: 32px;
     }
     &:hover {
-      opacity: 0.7;
+      opacity: 0.6;
     }
     
   }
@@ -151,59 +151,6 @@
 
   &__item {
     margin-bottom: 40px;
-    
-  }
-
-  &__link {
-  }
-}
-
-.post-preview {
-  
-  &:hover .post-preview__arrow{
-    opacity: 1;
-    left: 50%;
-  }
-  &:hover .post-preview__img::after{
-    opacity: 1;
-    
-  }
-  &__img {
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%;
-    margin-bottom: 12px;
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0,0,0,.5);
-      opacity: 0;
-      transition: all 0.4s linear;
-    }
-    
-    img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      object-fit: cover;
-      
-    }
-
-  }
-  &__arrow {
-    position: absolute;
-    width: 49px;
-    top: 50%;
-    left: 45%;
-    transform: translate(-50%,-50%);
-    opacity: 0;
-    transition: all 0.4s linear;
   }
 
   &__date {
@@ -219,7 +166,23 @@
     letter-spacing: 0.75px;
     text-transform: uppercase;
   }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    margin-bottom: 12px;
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
 }
+
 
 //* ~~~~~~~~ Banner ~~~~~~~~
 .banner {
@@ -266,11 +229,78 @@
     text-transform: uppercase;
     border: 1px solid #ffffff;
     color: #fff;
-    transition: opacity 0.3s linear;
+    transition: color 0.3s, background-color 0.3s;
     &:hover {
-      opacity: 0.7;
+      color: #000;
+      background-color: #fff;
     }
   }
+}
+
+//* ~~~~~~~~ Photo-preview ~~~~~~~~
+.photo-preview {
+  margin-top: 148px;
+  
+  &__items {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 710px 223px 467px;
+    grid-template-rows: 285px 77px 347px;
+    grid-gap: 20px;
+
+    grid-template-areas: "photo-1 photo-2 photo-3"  
+                          "photo-4 photo-2 photo-3"  
+                          "photo-4 photo-5 photo-5"; 
+
+  }
+  &__img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__item {
+    width: 100%;
+    position: relative;
+    
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  &__item--1 {
+    grid-area: photo-1;
+  }
+  &__item--2 {
+    grid-area: photo-2;
+  }
+  &__item--3 {
+    grid-area: photo-3;
+  }
+  &__item--4 {
+    grid-area: photo-4;
+  }
+  &__item--5 {
+    grid-area: photo-5;
+  }
+
+
+  &__item-title {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+
+    font-family: 'Alcotton', serif;
+    font-size: 22px;
+    color: #FFFFFF;
+    z-index: 5;
+  }
+
 }
 
 
@@ -298,25 +328,35 @@
       margin-left: 40px;
     }
   }
-  .link::after {
-    background-color: #000;
+  &__menu-link {
+    color: #6d6d6d;
+    transition: color 0.3s;
+    &:hover {
+      color: #000000;
+    }
   }
 }
 
 .footer-social {
   svg path {
-    fill: #000;
+    fill: #6d6d6d;
+    transition: fill 0.3s;
   }
-  .social__link-insta {
+  
+  &__link:hover svg path{
+    fill: #000;
+    opacity: 1;
+  }
+  &__link-insta {
     width: 18px;
   }
-  .social__link-youtube {
+  &__link-youtube {
     width: 21px;
   }
-  .social__link-vk {
+  &__link-vk {
     width: 23px;
   }
-  .social__link + .social__link {
+  &__link + .footer-social__link {
     margin-left: 22px;
   }
 }
