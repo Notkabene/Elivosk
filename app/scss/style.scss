@@ -288,20 +288,25 @@
   &__item--5 {
     grid-area: photo-5;
   }
+}
 
-
-  &__item-title {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-
-    font-family: 'Alcotton', serif;
-    font-size: 22px;
-    color: #FFFFFF;
-    z-index: 5;
+//* ~~~~~~~~ Store-preview ~~~~~~~~
+.store-preview {
+  margin-top: 137px;
+  &__wrapper {
+    max-width: 953px;
+    margin: 0 auto;
   }
 
+  &__items {
+    display: grid;
+    grid-template-columns:repeat(2, minmax(280px, 1fr)) ;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+  }
 }
+
+
 
 
 
