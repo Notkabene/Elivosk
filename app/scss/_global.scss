@@ -1,0 +1,255 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+  
+}
+
+body {
+  height: 100%;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Circe', sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #000;
+}
+
+body._lock {
+  overflow: hidden;
+}
+
+ul,
+li {
+  font-family: 'Circe', sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  font-family: 'Circe', sans-serif;
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
+
+button,
+select {
+  font-family: 'Circe', sans-serif;
+  cursor: pointer;
+  outline: none;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+//* ~~~~~~~~ Section ~~~~~~~~
+.section {
+  position: relative;
+  .section-title {
+    position: absolute;
+    top: 50%;
+    transform: translateY( -50%);
+    left: 25px;
+    z-index: 50;
+  }
+  .section__title {
+    font-family: 'Alcotton', serif;
+    color: #000;
+    font-size: 25px;
+    font-weight: 400;
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+  }
+
+}
+
+.link-more {
+  padding-left: 60px;
+  color: #000000;
+  font-family: 'Circe';
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    width: 44px;
+    height: 1px;
+    background-color: #000;
+    top: 50%;
+    left: 0;
+  }
+}
+
+// .link {
+//   position: relative;
+
+//   &::after {
+//     content: '';
+//     width: 0px;
+//     height: 1px;
+//     background-color: #fff;
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     transition: width .5s;
+//   }
+
+//   &:hover::after {
+//     width: 100%;
+//   }
+// }
+
+
+//* ~~~~~~~~ Burger + Menu ~~~~~~~~
+.burger {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: -33px;
+  cursor: pointer;
+
+  span {
+    margin-top: 13px;
+    display: block;
+    width: 23px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 2px;
+    transition: all .3s linear;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: 23px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    transition: all .3s linear;
+  }
+
+  &::before {
+    top: 4px;
+  }
+
+  &::after {
+    top: 21px;
+  }
+
+}
+
+.menu-burger {
+  background-color: #fff;
+  font-size: 20px;
+  width: 350px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 50;
+  transition: all 1s linear;
+
+  &__list {
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+  }
+
+  &__list-item {
+    width: 100%;
+    height: 50px;
+    margin-left: 30px;
+  }
+
+  &.active {
+    left: 0;
+  }
+
+  a {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.35px;
+    position: relative;
+    transition: all .3s ease;
+
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+.btn-close {
+  display: block;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 200;
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #000;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    z-index: 200;
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+}
+
+.menu__list .btn-close {
+  display: none;
+}
+
+.menu__list.active .btn-close {
+  display: block;
+}
