@@ -7,6 +7,7 @@
 .header {
   position: relative;
   z-index: 100;
+  
   &__content {
     padding-top: 47px;
     position: relative;
@@ -21,6 +22,21 @@
       opacity: 0.6;
     }
   }
+}
+.header__content--black {
+  .menu__link {
+    color: #000;
+    &:hover {
+      color: #6D6D6D;
+    }
+  }
+  svg path {
+    fill: #000;
+  }
+  .logo:hover {
+    opacity: 0.7;
+  }
+  
 }
 
 .menu {
@@ -324,10 +340,6 @@
 
   &__info-title {
     margin-bottom: 37px;
-    font-family: 'Alcotton', serif;
-    font-size: 28px;
-    font-weight: normal;
-
   }
 
   &__info-text {
@@ -404,7 +416,6 @@
 
 .footer-social {
   svg path {
-    fill: #6d6d6d;
     transition: fill 0.3s;
   }
   
@@ -426,6 +437,8 @@
   }
 }
 
+
+@import "about";
 
 
 @import "media";
