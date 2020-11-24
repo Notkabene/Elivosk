@@ -23,40 +23,7 @@
     }
   }
 }
-.header__content--black {
-  .menu__link {
-    color: #000;
-    &:hover {
-      color: #6D6D6D;
-    }
-  }
-  svg path {
-    fill: #000;
-  }
-  .logo:hover {
-    opacity: 0.7;
-  }
-  
-}
 
-.menu {
-  display: flex;
-  justify-content: space-between;
-  &__list {
-    & + .menu__list {
-      margin-left: 46px;
-    }
-  }
-
-  &__link {
-    font-family: 'Alcotton', serif;
-    color: #fff;
-    transition: color 0.3s;
-    &:hover {
-      color: #ccc;
-    }
-  }
-}
 
 //*~~~~~~~~ Social ~~~~~~~~
 .social {
