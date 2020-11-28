@@ -20,7 +20,12 @@
   
   margin-top: 70px;
   &__img {
+    max-width: 955px;
     text-align: center;
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
   }
 }
 
@@ -56,10 +61,14 @@
   &__social {
     margin: 60px 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     &-link {
       transition: opacity 0.3s;
+      text-align: center;
+      & + .about-contacts__social-link {
+        margin-left: 135px;
+      }
       &:hover {
         opacity: 0.7;
       }

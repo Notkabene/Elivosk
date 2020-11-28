@@ -1,4 +1,19 @@
 
+//* ======= 1600 =======
+@media (max-width: 1600px) {
+  .container {
+    padding-left: 75px;
+    max-width: 1530px;
+  }
+}
+
+//* ======= 1300 =======
+@media (max-width: 1300px) {
+  
+}
+
+
+
 //* ======= 1200 =======
 @media (max-width: 1200px) {
   .header-social {
@@ -18,15 +33,26 @@
   .section .container {
     padding-left: 60px;
     padding-right: 30px;
+  }.photo-preview .photo-preview--5 {
+    padding-bottom: 1.2%;
   }
+
+}
+
+//* ======= 1100 =======
+@media (max-width: 1100px) {
 
 }
 
 //* ======= 991 =======
 @media (max-width: 991px) {
-  .section .container {
+  .section .container,
+  .footer .container {
     padding-left: 30px;
     padding-right: 30px;
+  }
+  .section {
+    margin-top: 100px;
   }
   .menu {
     display: block;
@@ -76,11 +102,11 @@
   }
   .section .section-title {
     position: relative;
-    margin-top: 100px;
     text-align: center;
     transform: translate(-50%, 0);
     left: 50%;
   }
+
   .section .section__title {
     transform: rotate(0);
     writing-mode: unset;
@@ -89,18 +115,132 @@
     margin-top: 30px;
   }
 
+  .banner {
+    min-height: 100%;
+    padding: 70px 0;
+  }
+  .store-preview__wrapper {
+    margin-top: 30px;
+  }
+  .instagram__wrapper {
+    margin-top: 30px;
+  }
+  .instagram__info-title {
+    display: none;
+  }
+  .instagram__wrapper {
+    flex-direction: column;
+  }
+  .instagram__info {
+    max-width: 680px;
+    order: 2;
+    margin-top: 30px;
+    margin-right: 0;
+  }
+  .instagram__info-btn {
+    margin-top: 0;
+  }
+  .footer__content {
+    height: 100%;
+    padding: 30px 0;
+  }
+  .footer__menu {
+    flex-direction: column;
+    align-items: start;
+  }
+  .footer__menu-item+.footer__menu-item {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .banner,.footer {
+    margin-top: 100px;
+  }
+  .photo-preview__items {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  
+ 
+  .photo-preview__item--second {
+    margin-top: 20px;
+    grid-template-rows: 400px 400px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    'photo-1 photo-2 photo-2'
+    'photo-3 photo-3 photo-3';
+  }
+  
+  .photo-preview__item+.photo-preview__item {
+    margin-left: 0;
+  }
+  .about .section__title,
+  .about-contacts .section__title {
+    display: none;
+  }
+  .about-contacts.section {
+    margin-top: 40px;
+  }
+  .about-contacts.section .section__title {
+    margin-top: 60px;
+  }
+  .about-photo.section {
+    margin-top: 0;
+  }
+  
+  
 }
 
 //* ======= 767 =======
 @media (max-width: 767px) {
+  .section {
+    margin-top: 60px;
+  }
   .last-posts__items {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+  }
+  .banner {
+    padding: 40px 0;
+  }
+  .banner__info-title {
+    font-size: 26px;
+  }
+  .footer {
+    margin-top: 100px;
+  }
+  .photo-preview__item--second {
+    grid-template-rows: 300px 300px;
+  }
+  .about-contacts__social-link svg {
+    width: 80%;
+  }
+  .about-contacts__social-link+.about-contacts__social-link {
+    margin-left: 80px;
+  }
+}
+
+//* ======= 640 =======
+@media (max-width: 640px) {
+  .store-preview__items {
+    grid-template-columns: 1fr;
+    text-align: center;
+    
+  }
+  .photo-preview__item--second {
+    grid-template-rows: 250px 250px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    'photo-1 photo-2'
+    'photo-3 photo-3';
+  }
+  .about-contacts__social-link+.about-contacts__social-link {
+    margin-left: 50px;
   }
 }
 
 //* ======= 479 =======
 @media (max-width: 479px) {
+  
   .header__content {
     padding-top: 20px;
   }
@@ -124,4 +264,54 @@
   .last-posts__items {
     display: block;
   }
+  .banner__info-title {
+    font-size: 24px;
+  }
+  .footer {
+    margin-top: 60px;
+  }
+  .footer__content {
+    flex-direction: column;
+    align-items: start;
+  }
+  .footer__menu {
+    margin-bottom: 20px;
+  }
+  .footer__menu-link {
+    font-size: 20px;
+  }
+   .banner,.footer {
+    margin-top: 60px;
+  }
+  .instagram__posts {
+    grid-template-columns: 1fr 1fr;
+  }
+  .last-posts__wrapper,
+  .photo-preview__items,
+  .store-preview__wrapper,
+  .instagram__wrapper {
+    margin-top: 15px;
+  }
+  .photo-preview__item--second {
+    display: block;
+  }
+  .photo-preview .photo-preview__link {
+    width: 100%;
+    height: 250px;
+    padding-bottom: 0;
+    & + .photo-preview__link {
+      margin-top: 15px;
+    }
+  }
+  .about-contacts__social-link svg {
+    width: 60%;
+  }
+  .about-contacts__social-link+.about-contacts__social-link {
+    margin-left: 30px;
+  }
+  .about-contacts__social {
+    margin: 30px 0;
+  }
+  
+  
 }
