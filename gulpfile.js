@@ -42,7 +42,8 @@ function images() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
-    'app/js/jquery.magnific-popup.min.js',
+    'app/js/lightgallery.min.js',
+    // 'app/js/jquery.magnific-popup.min.js',
     'app/js/main.js'
     
   ])
