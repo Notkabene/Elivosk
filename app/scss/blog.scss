@@ -1,0 +1,13 @@
+//*------ BLOG -------
+.favorites {
+  margin-bottom: 180px;
+}
+.blog {
+  .last-posts__wrapper {
+    margin-top: 50px;
+  }
+  &.section .section-title {
+    top: 130px;
+    transform: none;
+  }
+}
