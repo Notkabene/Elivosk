@@ -81,21 +81,22 @@ select {
 //* ~~~~~~~~ Section ~~~~~~~~
 .section {
   position: relative;
-  .section-title {
+  .side-title {
     position: absolute;
     top: 50%;
     transform: translateY( -50%);
     left: 25px;
     z-index: 50;
+    &__name {
+      font-family: 'Alcotton', serif;
+      color: #000;
+      font-size: 25px;
+      font-weight: 400;
+      writing-mode: tb-rl;
+      transform: rotate(-180deg);
+    }
   }
-  .section__title {
-    font-family: 'Alcotton', serif;
-    color: #000;
-    font-size: 25px;
-    font-weight: 400;
-    writing-mode: tb-rl;
-    transform: rotate(-180deg);
-  }
+  
 }
 
 
@@ -289,4 +290,62 @@ select {
   }
 
   
+}
+
+
+//* ~~~~~~~~ Magnific Popup ~~~~~~~~
+.mfp-counter {
+  display: none;
+}
+
+button.mfp-close {
+  content: '';
+  background-image: url(../images/icons/popup-close.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 0;
+}
+
+.mfp-arrow::after,
+.mfp-arrow::before {
+  border: none;
+}
+
+.mfp-arrow-right:after {
+  background-image: url(../images/icons/popup-arrow-right.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 22px;
+}
+
+.mfp-arrow-left:after {
+  background-image: url(../images/icons/popup-arrow-left.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 22px;
+  margin-left: 0;
+}
+  
+body.mfp-zoom-out-cur {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.mfp-arrow-left {
+  left: 120px;
+}
+
+.mfp-arrow-right {
+  right: 120px;
+}
+
+button.mfp-close {
+  top: 10px;
+  right: 120px;
+}
+.mfp-close:active {
+  top: 11px;
 }
