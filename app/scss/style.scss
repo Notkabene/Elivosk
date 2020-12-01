@@ -197,6 +197,8 @@
     max-width: 480px;
     font-family: 'Alcotton', serif;
     font-size: 28px;
+    font-weight: 400;
+
   }
 
   &__info-text {
@@ -315,7 +317,7 @@
   }
 }
 
-//* ~~~~~~~~ instagram ~~~~~~~~
+//* ~~~~~~~~ Instagram ~~~~~~~~
 .instagram {
   margin-top: 207px;
 
@@ -343,15 +345,15 @@
   &__info-btn {
     padding: 10px 21px 8px 21px;
     margin-top: 37px;
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     text-transform: uppercase;
     font-size: 16px;
     transition: background-color 0.3s, color 0.3s ;
     border: 1px solid #000;
     &:hover {
-      background-color: #fff;
-      color: #000;
+      background-color: #000;
+      color: #fff;
     }
   }
 
@@ -438,6 +440,8 @@
 @import "about";
 @import "blog";
 @import "post";
+@import "gallery";
+@import "store";
 
 
 @import "media";

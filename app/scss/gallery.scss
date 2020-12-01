@@ -1,0 +1,16 @@
+
+.gallery__items {
+  margin-top: 120px;
+  max-width: 1440px;
+  width: 100%;
+  img {
+    width: 100%;
+  }
+  .post-preview__img::after {
+    margin-bottom: 7px;
+  }
+}
+.grid-item {
+  float: left;
+  margin-bottom: 13px;
+}

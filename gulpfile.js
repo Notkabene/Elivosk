@@ -43,7 +43,9 @@ function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
     'app/js/lightgallery.min.js',
-    // 'app/js/jquery.magnific-popup.min.js',
+    'app/js/imagesloaded.pkgd.min.js',
+    'app/js/masonry.pkgd.min.js',
+    'app/js/isotope.pkgd.min.js',
     'app/js/main.js'
     
   ])

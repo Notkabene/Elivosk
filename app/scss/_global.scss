@@ -12,7 +12,6 @@ html,
 body {
   position: relative;
   overflow-x: hidden;
-  
 }
 
 body {
@@ -29,6 +28,10 @@ body {
 
 body._lock {
   overflow: hidden;
+}
+
+body.lg-on::-webkit-scrollbar {
+  width: 0;
 }
 
 ul,
@@ -86,6 +89,7 @@ select {
     top: 50%;
     transform: translateY( -50%);
     left: 25px;
+    
     z-index: 50;
     &__name {
       font-family: 'Alcotton', serif;
@@ -96,11 +100,9 @@ select {
       transform: rotate(-180deg);
     }
   }
-  
 }
 
-
-
+//* ~~~~~~~~ Link More ~~~~~~~~
 .link-more {
   padding-left: 60px;
   color: #000000;
@@ -113,7 +115,7 @@ select {
   transition: text-shadow 0.3s;
 
   &:hover {
-    text-shadow: 0 0 0.5px, 0 0 0.5px;
+    text-shadow: 0 0 0.5px;
     font-weight: 400;
   }
 
@@ -151,14 +153,12 @@ select {
       fill: #fff;
     }
   }
-
   .burger-line--1 {
     top: -10px;
   }
   .burger-line--3 {
-      top: 10px;
+    top: 10px;
   }
-
 }
 
 .header__content.header__content--black {
@@ -174,27 +174,9 @@ select {
   }
   .menu__link {
     color: #000000;
-  }
-}
-
-.menu {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  top: 0;
-
-  &__list {
-    & + .menu__list {
-      margin-left: 46px;
-    }
-  }
-
-  &__link {
-    font-family: 'Alcotton', serif;
-    color: #fff;
-    transition: color 0.3s;
+    transition: opacity 0.3s;
     &:hover {
-      color: #ccc;
+      opacity: 0.5;
     }
   }
 }
@@ -230,6 +212,28 @@ select {
   
 }
 
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+
+  &__list {
+    & + .menu__list {
+      margin-left: 46px;
+    }
+  }
+
+  &__link {
+    font-family: 'Alcotton', serif;
+    color: #fff;
+    transition: color 0.3s;
+    font-size: 23px;
+    &:hover {
+      color: #ccc;
+    }
+  }
+}
 
 
 
@@ -275,7 +279,6 @@ select {
       transition: all 300ms;
       z-index: 5;
     }
-    
   }
 
   &__title {
@@ -287,10 +290,10 @@ select {
     font-size: 22px;
     color: #FFFFFF;
     z-index: 5;
-  }
-
-  
+    font-weight: 400;
+  } 
 }
+
 
 //* ~~~~~~~~ Lightgallery ~~~~~~~~
 .lg-backdrop.in {
@@ -348,4 +351,23 @@ button.lg-next.lg-icon {
 }
 .lg-actions .lg-next {
   right: 120px;
+}
+
+
+//* ~~~~~~~~ Cart ~~~~~~~~
+.cart {
+
+  &__link {
+    transition: opacity 0.3s;
+    svg {
+      width: 60px;
+      height: 56px;
+    }
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__icon-quantity {
+  }
 }

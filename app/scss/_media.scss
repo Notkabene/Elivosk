@@ -12,6 +12,7 @@
     padding-left: 15px;
   }
 
+  // ---- LightGallery ----
   .lg-actions .lg-prev {
     left: 30px;
   }
@@ -44,11 +45,6 @@
   .header__content {
     justify-content: space-around;
   }
-  .acquaintance__photo, .acquaintance__text {
-    flex-basis: 50%;
-    max-width: 100%;
-
-  }
   .section .side-title {
     left: 10px;
   }
@@ -58,7 +54,10 @@
   }.photo-preview .photo-preview--5 {
     padding-bottom: 1.2%;
   }
-
+  .acquaintance__photo, .acquaintance__text {
+    flex-basis: 50%;
+    max-width: 100%;
+  }
 }
 
 //* ======= 1100 =======
@@ -75,7 +74,6 @@
 //* ======= 991 =======
 //* =====================
 @media (max-width: 991px) {
-  
   .section .container,
   .footer .container {
     padding-left: 30px;
@@ -84,6 +82,17 @@
   .section {
     margin-top: 100px;
   }
+  .section .side-title {
+    position: relative;
+    text-align: center;
+    transform: translate(-50%, 0);
+    left: 50%;
+  }
+  .section .side-title__name {
+    transform: rotate(0);
+    writing-mode: unset;
+  }
+
   .menu {
     display: block;
     padding-top: 80px;
@@ -115,32 +124,22 @@
   .header__content {
     justify-content: space-between;
   }
-
+  
+  // ---- acquaintance ----
   .acquaintance__wrapper {
     flex-direction: column;
     margin-top: 30px;
   }
-  
   .acquaintance__photo {
     max-width: 400px;
     margin-right: 0;
     order: 2;
   }
-  
   .acquaintance__text {
     margin-bottom: 50px;
   }
-  .section .side-title {
-    position: relative;
-    text-align: center;
-    transform: translate(-50%, 0);
-    left: 50%;
-  }
 
-  .section .side-title__name {
-    transform: rotate(0);
-    writing-mode: unset;
-  }
+
   .last-posts__wrapper {
     margin-top: 30px;
   }
@@ -152,13 +151,10 @@
   .store-preview__wrapper {
     margin-top: 30px;
   }
+
+  // ---- instagram ----
   .instagram__wrapper {
     margin-top: 30px;
-  }
-  .instagram__info-title {
-    display: none;
-  }
-  .instagram__wrapper {
     flex-direction: column;
   }
   .instagram__info {
@@ -167,9 +163,14 @@
     margin-top: 30px;
     margin-right: 0;
   }
+  .instagram__info-title {
+    display: none;
+  }
   .instagram__info-btn {
     margin-top: 0;
   }
+
+  // ---- footer ----
   .footer__content {
     height: 100%;
     padding: 30px 0;
@@ -185,12 +186,23 @@
   .banner,.footer {
     margin-top: 100px;
   }
+  .footer-social {
+    &__link-insta {
+      width: 100%;
+    }
+    &__link-youtube {
+      width: 100%;
+    }
+    &__link-vk {
+      width: 100%;
+    }
+  }
+
+  // ---- photo-preview ----
   .photo-preview__items {
     flex-direction: column;
     margin-top: 30px;
   }
-  
- 
   .photo-preview__item--second {
     margin-top: 20px;
     grid-template-rows: 400px 400px;
@@ -199,10 +211,11 @@
     'photo-1 photo-2 photo-2'
     'photo-3 photo-3 photo-3';
   }
-  
   .photo-preview__item+.photo-preview__item {
     margin-left: 0;
   }
+
+  // ---- about ----
   .about .side-title__name,
   .about-contacts .side-title__name {
     display: none;
@@ -217,24 +230,15 @@
     margin-top: 0;
   }
   
-  .footer-social {
-    &__link-insta {
-      width: 100%;
-    }
-    &__link-youtube {
-      width: 100%;
-    }
-    &__link-vk {
-      width: 100%;
-    }
-  }
 
+  // ---- favorites ----
   .favorites .last-posts__wrapper {
     margin-top: 40px;
   }
   .favorites {
     margin-bottom: 80px;
   }
+  
 
   .blog.section .side-title {
     top: 0;
