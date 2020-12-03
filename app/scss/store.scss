@@ -34,6 +34,9 @@
     &:hover {
       opacity: 0.5;
     }
+    &.is-checked {
+      opacity: 0.5;
+    }
   }
   &__link {
     font-size: 16px;
@@ -54,19 +57,64 @@
   }
 
   &__top-form {
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      width: 13px;
+      height: 9px;
+      background-image: url(../images/icons/select-arrow.png);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      transition: transform 0.3s;
+    }
+    &.active::after {
+      transform: scale(1, -1);
+    }
 
+    select {
+      font-size: 16px;
+      font-family: 'Circe', serif;
+
+      border: none;
+      text-transform: uppercase;
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      padding-right: 26px;
+      
+      option {
+        text-transform: uppercase;
+        border: none;
+        font-size: 16px;
+        font-family: 'Circe', serif;
+      }
+    }
+    select::-ms-expand {
+      display: none; /* Hide the default arrow in Internet Explorer 10 and Internet Explorer 11 */
+    }
+    
   }
 
+
   &__items {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-right: -50px;
+    // display: flex;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
+    margin-right: -13%;
   }
 
   &__item {
+    display: inline-block;
     margin-bottom: 72px;
-    margin-right: 50px;
+    margin-right: 11.5%;
+    // &:nth-child(odd) {
+    //   margin-right: 13%;
+    // }
   }
 
   &__photo {
@@ -97,7 +145,7 @@
 
   &__info-name {
     font-size: 14px;
-    // font-weight: 300;
+    font-weight: 300;
     margin-bottom: 5px;
   }
 

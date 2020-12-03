@@ -359,6 +359,7 @@ button.lg-next.lg-icon {
 
   &__link {
     transition: opacity 0.3s;
+    position: relative;
     svg {
       width: 60px;
       height: 56px;
@@ -367,7 +368,18 @@ button.lg-next.lg-icon {
       opacity: 0.5;
     }
   }
+  // &__link-count {
+  //   font-size: 14px;
+  //   font-family: 'Alcotton', serif;
+  //   color: #1d1d1b;
+  //   font-weight: bold;
+  //   position: absolute;
+  //   bottom: 13px;
+  //   right: 0;
+  //   text-shadow: 0 0 0.5px;
+  // }
 
   &__icon-quantity {
   }
+  
 }
