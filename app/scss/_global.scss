@@ -356,7 +356,6 @@ button.lg-next.lg-icon {
 
 //* ~~~~~~~~ Cart ~~~~~~~~
 .cart {
-
   &__link {
     transition: opacity 0.3s;
     position: relative;
@@ -367,19 +366,48 @@ button.lg-next.lg-icon {
     &:hover {
       opacity: 0.5;
     }
-  }
-  // &__link-count {
-  //   font-size: 14px;
-  //   font-family: 'Alcotton', serif;
-  //   color: #1d1d1b;
-  //   font-weight: bold;
-  //   position: absolute;
-  //   bottom: 13px;
-  //   right: 0;
-  //   text-shadow: 0 0 0.5px;
-  // }
+  } 
+}
 
-  &__icon-quantity {
+.cart-btn {
+  width: 100%;
+  padding: 8px 20px;
+  background-color: #354936;
+  border: 1px solid #354936;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #fff;
+    color: #354936;
   }
-  
+}
+
+//* ~~~~~~~~ Breadcrumbs ~~~~~~~~
+.breadcrumbs {
+  display: flex;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 14px;
+  &__item {
+    a {
+      font-weight: 300;
+      font-size: 14px;
+      position: relative;
+      padding-right: 10px;
+      
+      &::after {
+        content: '/';
+        position: absolute;
+        font-size: 14px;
+        line-height: 1.2;
+        top: 50%;
+        right: 3px;
+        transform: translateY(-50%);
+      }
+    }
+    span {
+      font-weight: normal;
+    }
+  }
 }

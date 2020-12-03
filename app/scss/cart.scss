@@ -165,19 +165,7 @@
   }
 
   &__btn {
-    width: 100%;
     margin-bottom: 26px;
-    padding: 8px 20px;
-    background-color: #354936;
-    border: 1px solid #354936;
-    text-transform: uppercase;
-    color: #fff;
-    transition: all 0.3s;
-    &:hover {
-      background-color: #fff;
-      color: #354936;
-    }
-
   }
 
   &__info {
