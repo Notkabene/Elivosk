@@ -1,9 +1,11 @@
 // @import "magnific-popup";
 @import "vars";
 @import "lightgallery.min";
+@import "fullpage.min";
 @import "libs";
 @import "fonts";
 @import "global";
+
 
 //* ~~~~~~~~ Header ~~~~~~~~
 .header {
@@ -342,20 +344,7 @@
     margin-bottom: 37px;
   }
 
-  &__info-btn {
-    padding: 10px 21px 8px 21px;
-    margin-top: 37px;
-    background-color: #fff;
-    color: #000;
-    text-transform: uppercase;
-    font-size: 16px;
-    transition: background-color 0.3s, color 0.3s ;
-    border: 1px solid #000;
-    &:hover {
-      background-color: #000;
-      color: #fff;
-    }
-  }
+  
 
   &__posts {
     display: grid;
@@ -444,6 +433,7 @@
 @import "store";
 @import "cart";
 @import "product";
+@import "partnership";
 
 
 @import "media";

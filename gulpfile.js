@@ -46,6 +46,7 @@ function scripts() {
     'app/js/imagesloaded.pkgd.min.js',
     'app/js/masonry.pkgd.min.js',
     'app/js/isotope.pkgd.min.js',
+    'app/js/fullpage.min.js',
     'app/js/main.js'
     
   ])

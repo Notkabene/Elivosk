@@ -51,6 +51,7 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
+  font-weight: normal;
 }
 
 a {
@@ -367,6 +368,22 @@ button.lg-next.lg-icon {
       opacity: 0.5;
     }
   } 
+}
+
+
+.btn {
+  padding: 10px 21px 8px 21px;
+  margin-top: 37px;
+  background-color: #fff;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s ;
+  border: 1px solid #000;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
 }
 
 .cart-btn {
