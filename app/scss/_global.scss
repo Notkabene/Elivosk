@@ -34,6 +34,18 @@ body.lg-on::-webkit-scrollbar {
   width: 0;
 }
 
+body.lg-on {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+
+
 ul,
 li {
   font-family: 'Circe', sans-serif;

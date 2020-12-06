@@ -65,6 +65,15 @@ $(function () {
   //*======= Полноэкранный режим =======
   $('#fullpage').fullpage({
     licenseKey: 'C4198C2E-BF8F4FE3-B535FFC1-A0D1CBFC',
+    anchors:[
+      'firstPage',
+      'secondPage',
+      'thirdPage',
+      'fourthPage',
+      'fifthPage',
+      'sixth',
+    ],
+    // menu:'#menu'
     // responsiveWidth: 1023,
     // responsiveHeight: 767
   });
