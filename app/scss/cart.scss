@@ -74,12 +74,17 @@
   &__quantity-plus {
     cursor: pointer;
   }
+  &__quantity-number {
+    margin: 0 15px;
+  }
 
 }
 
 .product-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 224px 1fr;
   margin-bottom: 44px;
+  gap: 20px;
 
   &__img {
     margin-right: 20px;
@@ -157,7 +162,9 @@
   &__item-number {
     margin-right: 3px;
   }
-
+  &__item-price {
+    width: 170px;
+  }
   &__item--total {
     font-weight: normal;
     margin-top: 32px;
@@ -181,4 +188,6 @@
     }
   }
 }
+
+
 

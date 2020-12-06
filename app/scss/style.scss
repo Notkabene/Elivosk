@@ -1,13 +1,12 @@
 // @import "magnific-popup";
-@import "vars";
 @import "lightgallery.min";
 @import "fullpage.min";
-@import "libs";
 @import "fonts";
 @import "global";
 
 
 //* ~~~~~~~~ Header ~~~~~~~~
+//* ~~~~~~~~~~~~~~~~~~~~~~~~
 .header {
   position: relative;
   z-index: 100;
@@ -30,7 +29,9 @@
 
 
 //*~~~~~~~~ Social ~~~~~~~~
+//* ~~~~~~~~~~~~~~~~~~~~~~~
 .social {
+  min-width: 175px;
   &__link {
     transition: opacity 0.3s;
     display: inline-block;
@@ -46,6 +47,7 @@
 
 
 //*~~~~~~~~ Banner-header ~~~~~~~~
+//* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .banner-header {
   min-height: 100vh;
   position: relative;
@@ -57,7 +59,6 @@
     left: 0;
     object-fit: cover;
   }
-  
 
   &__caption {
     position: absolute;
@@ -71,11 +72,9 @@
   }
 
   &__caption-name {
-    // display: block;
     font-family: 'Alcotton', serif;
     color: #fff;
     font-size: 25px;
-    font-weight: 400;
     margin: 0 auto;
   }
 
@@ -88,6 +87,7 @@
 }
 
 //* ~~~~~~~~ Acquaintance ~~~~~~~~
+//* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .acquaintance {
   &__wrapper {
     margin-top: 157px;
@@ -100,7 +100,6 @@
     max-width: 710px;
     width: 100%;
     margin-right: 50px;
-    // 
     .photo {
       width: 100%;
       padding-top: 100%;
@@ -114,11 +113,11 @@
         object-fit: cover;
       }
     }
-    
   }
 
   &__text {
     max-width: 610px;
+    font-weight: 300;
     p + p {
       margin-top: 35px;
     }
@@ -126,8 +125,8 @@
 }
 
 //* ~~~~~~~~ Last Posts ~~~~~~~~
+//* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .last-posts {
-
   &__wrapper {
     margin-top: 190px;
   }
@@ -140,10 +139,12 @@
 
   &__item {
     margin-bottom: 40px;
+    flex-direction: column;
   }
 
   &__date {
-    margin-bottom: 6px;
+    display: block;
+    margin-bottom: 7px;
     font-size: 14px;
     font-weight: 300;
     letter-spacing: 0.7px;
@@ -160,7 +161,7 @@
     position: relative;
     width: 100%;
     padding-bottom: 100%;
-    margin-bottom: 12px;
+    margin-bottom: 13px;
     img {
       position: absolute;
       width: 100%;
@@ -174,6 +175,7 @@
 
 
 //* ~~~~~~~~ Banner ~~~~~~~~
+//* ~~~~~~~~~~~~~~~~~~~~~~~~
 .banner {
   margin-top: 137px;
   min-height: 100vh;
@@ -190,6 +192,7 @@
   }
 
   &__info {
+    padding: 50px 0;
     position: relative;
     color: #fff;
   }
@@ -199,8 +202,6 @@
     max-width: 480px;
     font-family: 'Alcotton', serif;
     font-size: 28px;
-    font-weight: 400;
-
   }
 
   &__info-text {
@@ -229,9 +230,9 @@
 }
 
 //* ~~~~~~~~ Photo-preview ~~~~~~~~
+//* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .photo-preview {
   margin-top: 148px;
-
   &__items {
     display: flex;
     margin-bottom: 40px;
@@ -256,7 +257,7 @@
   
   &__link {
     width: 100%;
-
+    display: flex;
   }
   &__link-wrapper {
     width: 100%;
@@ -274,7 +275,7 @@
   .photo-preview--1 {
     height: 100%;
     padding-bottom: 40%;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   .photo-preview--2 {
     height: 100%;
@@ -290,12 +291,11 @@
   .photo-preview--5 {
     grid-area: photo-3;
     height: 100%;
-    padding-bottom: 1%;
   }
-  
 }
 
 //* ~~~~~~~~ Store-preview ~~~~~~~~
+//* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .store-preview {
   margin-top: 137px;
   &__wrapper {
@@ -314,12 +314,10 @@
     height: 100%;
     object-fit: cover;
   }
-  .post-preview__img::after {
-    margin-bottom: 7px;
-  }
 }
 
 //* ~~~~~~~~ Instagram ~~~~~~~~
+//* ~~~~~~~~~~~~~~~~~~~~~~~
 .instagram {
   margin-top: 207px;
 
@@ -342,15 +340,14 @@
 
   &__info-text {
     margin-bottom: 37px;
+    font-weight: 300;
   }
-
-  
 
   &__posts {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
-    flex-basis: 55%;
+    gap: 17px;
+    flex-basis: 49%;
   }
 
   &__post {
@@ -359,19 +356,16 @@
       width: 100%;
     }
   }
-
-  
 }
 
 
-
-
-
 //* ~~~~~~~~ Footer ~~~~~~~~
+//* ~~~~~~~~~~~~~~~~~~~~~~~
 .footer {
   background-color: #f7f7f7;
   margin-top: 180px;
   &__content {
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -380,8 +374,9 @@
 
   &__menu {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    margin: 0 40px -10px;
   }
 
   &__menu-item {
@@ -392,6 +387,8 @@
   &__menu-link {
     color: #6d6d6d;
     transition: color 0.3s;
+    margin-bottom: 10px;
+    font-weight: 300;
     &:hover {
       color: #000000;
     }
@@ -426,10 +423,122 @@
 }
 
 
-@import "about";
-@import "blog";
+//* ~~~~~~~~ BLOG ~~~~~~~~
+//* ~~~~~~~~~~~~~~~~~~~~~~~
+.favorites {
+  margin-bottom: 180px;
+}
+.blog {
+  .last-posts__wrapper {
+    margin-top: 50px;
+  }
+  &.section .side-title {
+    top: 130px;
+    transform: none;
+  }
+}
+
+
+//* ~~~~~~~~ GALLERY ~~~~~~~~
+//* ~~~~~~~~~~~~~~~~~~~~~~~
+.gallery__items {
+  margin-top: 120px;
+  max-width: 1440px;
+  width: 100%;
+  img {
+    width: 100%;
+  }
+  .post-preview__img::after {
+    margin-bottom: 7px;
+  }
+}
+.grid-item {
+  float: left;
+  margin-bottom: 13px;
+}
+
+
+//* ~~~~~~~~ ABOUT ~~~~~~~~
+//* ~~~~~~~~~~~~~~~~~~~~~~~
+.about {
+  margin-top: 115px;
+  .title {
+    text-align: center;
+  }
+  &__text {
+    max-width: 610px;
+    margin: 0 auto;
+    margin-top: 35px;
+    text-align: center;
+    
+    p {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.about-photo {
+  margin-top: 70px;
+  &__img {
+    max-width: 955px;
+    text-align: center;
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.about-contacts {
+  margin-top: 100px;
+
+  .title {
+    text-align: center;
+  }
+
+  &__text {
+    margin: 0 auto;
+    margin-top: 37px;
+    max-width: 710px;
+    
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text--link {
+    display: inline;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1.2;
+    transition: text-shadow 0.3s;
+    &:hover {
+      text-shadow: 0 0 0.4px, 0 0 0.4px;
+      font-weight: 500;
+    }
+  }
+
+  &__social {
+    margin: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-link {
+      transition: opacity 0.3s;
+      text-align: center;
+      & + .about-contacts__social-link {
+        margin-left: 135px;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+
+
 @import "post";
-@import "gallery";
 @import "store";
 @import "cart";
 @import "product";

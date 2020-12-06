@@ -22,7 +22,7 @@
 }
 
 .aside-store {
-  margin-right: 100px;
+  margin-right: 30px;
   &__title {
     margin-bottom: 35px;
     font-size: 16px;
@@ -40,6 +40,18 @@
   }
   &__link {
     font-size: 16px;
+  }
+  .aside-store__item.aside-store__del {
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+    a {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -102,9 +114,6 @@
 
 
   &__items {
-    // display: flex;
-    // justify-content: space-between;
-    // flex-wrap: wrap;
     margin-right: -13%;
   }
 
@@ -117,6 +126,7 @@
   &__photo {
     max-width: 467px;
     width: 100%;
+    
     position: relative;
     
     img {
@@ -129,9 +139,11 @@
   &__photo-img {
     width: 100%;
     height: 100%;
+    display: flex;
   }
 
   &__info {
+    max-width: 467px;
     margin-top: 14px;
     display: flex;
     justify-content: space-between;
@@ -141,13 +153,16 @@
     font-size: 14px;
     font-weight: 300;
     margin-bottom: 5px;
+    flex-basis: 80%;
   }
 
   &__info-color {
+    // flex-basis: 10%;
     display: flex;
   }
   &__info-size {
     font-size: 14px;
+    // flex-basis: 18%;
   }
 
   &__color {

@@ -42,7 +42,11 @@ li {
   list-style: none;
 }
 
-p,
+p {
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+}
 h1,
 h2,
 h3,
@@ -96,7 +100,6 @@ select {
       font-family: 'Alcotton', serif;
       color: #000;
       font-size: 25px;
-      font-weight: 400;
       writing-mode: tb-rl;
       transform: rotate(-180deg);
     }
@@ -185,6 +188,7 @@ select {
 .header__content.active {
   .menu  {
     left: 0;
+    
   }
   .burger {
     
@@ -218,6 +222,8 @@ select {
   display: flex;
   justify-content: space-between;
   top: 0;
+  padding: 0 25px;
+  flex-wrap: wrap;
 
   &__list {
     & + .menu__list {
@@ -230,6 +236,7 @@ select {
     color: #fff;
     transition: color 0.3s;
     font-size: 23px;
+    margin-bottom: 20px;
     &:hover {
       color: #ccc;
     }
@@ -241,7 +248,7 @@ select {
 //* ~~~~~~~~ Post preview ~~~~~~~~
 .post-preview {
   position: relative;
-
+  display: flex;
   &:hover .post-preview__img::after{
     opacity: 1;
   }
