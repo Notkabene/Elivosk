@@ -89,20 +89,22 @@ select {
 //* ~~~~~~~~ Section ~~~~~~~~
 .section {
   position: relative;
-  .side-title {
-    position: absolute;
-    top: 50%;
-    transform: translateY( -50%);
-    left: 25px;
-    
-    z-index: 50;
-    &__name {
-      font-family: 'Alcotton', serif;
-      color: #000;
-      font-size: 25px;
-      writing-mode: tb-rl;
-      transform: rotate(-180deg);
-    }
+  
+}
+
+.side-title {
+  position: absolute;
+  top: 50%;
+  transform: translateY( -50%);
+  left: 25px;
+  
+  z-index: 50;
+  &__name {
+    font-family: 'Alcotton', serif;
+    color: #000;
+    font-size: 25px;
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
   }
 }
 
