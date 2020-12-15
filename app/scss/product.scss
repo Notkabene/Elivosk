@@ -49,6 +49,7 @@
   &__description {
     margin-bottom: 37px;
     font-weight: 300;
+    text-align: justify;
   }
 
   &__properties {
@@ -89,6 +90,7 @@
 
   &__color {
     margin: 25px 0;
+    
   }
 
   &__color-name {
@@ -118,6 +120,10 @@
     span {
       margin-right: 13px;
       cursor: pointer;
+      transition: text-shadow 0.3s;
+      &:hover {
+        text-shadow: 0 0 0.4px, 0 0 0.4px;
+      }
     }
   }
 
@@ -172,6 +178,7 @@
     p {
       margin-bottom: 20px;
       font-size: 14px;
+      text-align: justify;
     }
   }
 }

@@ -114,7 +114,8 @@ select {
   &__name {
     font-family: 'Alcotton', serif;
     color: #000;
-    font-size: 25px;
+    font-size: 18px;
+    letter-spacing: 0.18em;
     writing-mode: tb-rl;
     transform: rotate(-180deg);
   }
@@ -123,18 +124,17 @@ select {
 //* ~~~~~~~~ Link More ~~~~~~~~
 .link-more {
   padding-left: 60px;
-  color: #000000;
+  color: #505050;
   font-family: 'Circe';
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 0.7px;
   text-transform: uppercase;
   position: relative;
-  transition: text-shadow 0.3s;
+  transition: color 0.3s;
 
   &:hover {
-    text-shadow: 0 0 0.5px;
-    font-weight: 400;
+    color: #000;
   }
 
   &::before {
@@ -142,7 +142,7 @@ select {
     position: absolute;
     width: 44px;
     height: 1px;
-    background-color: #000;
+    background-color: #505050;
     top: 50%;
     left: 0;
   }
@@ -249,8 +249,8 @@ select {
     font-family: 'Alcotton', serif;
     color: #fff;
     transition: color 0.3s;
-    font-size: 23px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
     &:hover {
       color: #ccc;
     }
@@ -309,12 +309,14 @@ select {
     left: 30px;
 
     font-family: 'Alcotton', serif;
-    font-size: 22px;
+    font-size: 18px;
+    font-weight: 700;
     color: #FFFFFF;
     z-index: 5;
-    font-weight: 400;
-  } 
+    letter-spacing: 0.05em;
+  }
 }
+
 
 
 //* ~~~~~~~~ Lightgallery ~~~~~~~~
@@ -326,7 +328,7 @@ button.lg-close.lg-icon {
   background-image: url(../images/icons/popup-close.svg);
   background-position: center;
   background-repeat: no-repeat;
-  margin-top: 10px;
+  margin-top: 54px;
   margin-right: 120px;
   font-size: 0;
 }
@@ -389,16 +391,25 @@ button.lg-next.lg-icon {
       opacity: 0.5;
     }
   } 
+  &.cart--white {
+    svg text{
+      stroke: #fff;
+    }
+    svg path{
+      fill: #fff;
+    }
+  }
 }
 
 
 .btn {
   padding: 10px 21px 8px 21px;
-  margin-top: 37px;
   background-color: #fff;
   color: #000;
   text-transform: uppercase;
   font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
   transition: background-color 0.3s, color 0.3s ;
   border: 1px solid #000;
   &:hover {

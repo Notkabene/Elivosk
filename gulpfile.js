@@ -63,7 +63,7 @@ function styles() {
     .pipe(scss({outputStyle: 'compressed'}))
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({
-      overrideBrowserslist: ['last 10 version'],
+      overrideBrowserslist: ['last 8 version'],
       grid: true
     }))
     .pipe(dest('app/css'))

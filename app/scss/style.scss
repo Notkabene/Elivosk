@@ -74,8 +74,10 @@
   &__caption-name {
     font-family: 'Alcotton', serif;
     color: #fff;
-    font-size: 25px;
+    font-size: 23px;
     margin: 0 auto;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
   }
 
   &__caption-line {
@@ -118,6 +120,7 @@
   &__text {
     max-width: 610px;
     font-weight: 300;
+    text-align: justify;
     p + p {
       margin-top: 35px;
     }
@@ -202,6 +205,8 @@
     max-width: 480px;
     font-family: 'Alcotton', serif;
     font-size: 28px;
+    font-weight: 700;
+    line-height: 1.38;
   }
 
   &__info-text {
@@ -209,6 +214,7 @@
     font-weight: 300;
     letter-spacing: 0.2px;
     margin-bottom: 25px;
+    text-align: justify;
   }
 
   &__info-btn {
@@ -275,9 +281,9 @@
   .photo-preview--1 {
     height: 100%;
     padding-bottom: 40%;
-    margin-bottom: 20px;
   }
   .photo-preview--2 {
+    margin-top: 20px;
     height: 100%;
     padding-bottom: 62%;
   }
@@ -335,11 +341,19 @@
 
   &__info-title {
     margin-bottom: 37px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 26px;
+    font-weight: 700;
   }
 
   &__info-text {
-    margin-bottom: 37px;
+    margin-bottom: 35px;
     font-weight: 300;
+    text-align: justify;
+  }
+  &__info-btn {
+    margin-top: 4px;
   }
 
   &__posts {
@@ -375,7 +389,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0 40px -10px;
+    margin: 0 40px -10px 0;
   }
 
   &__menu-item {
@@ -387,7 +401,8 @@
     color: #6d6d6d;
     transition: color 0.3s;
     margin-bottom: 10px;
-    font-weight: 300;
+    font-size: 18px;
+    font-weight: 400;
     &:hover {
       color: #000000;
     }
@@ -408,13 +423,13 @@
     opacity: 1;
   }
   &__link-insta {
-    width: 18px;
-  }
-  &__link-youtube {
     width: 21px;
   }
+  &__link-youtube {
+    width: 26px;
+  }
   &__link-vk {
-    width: 23px;
+    width: 28px;
   }
   &__link + .footer-social__link {
     margin-left: 22px;
@@ -460,9 +475,7 @@
     margin-bottom: 20px;
   }
   .photo-preview__items--add {
-
     display: grid;
-  
     gap: 20px;
     
     grid-template-columns: 1fr 1fr 1fr;
@@ -552,7 +565,7 @@
     max-width: 610px;
     margin: 0 auto;
     margin-top: 35px;
-    text-align: center;
+    text-align: justify;
     
     p {
       margin-bottom: 30px;
@@ -583,6 +596,7 @@
     margin: 0 auto;
     margin-top: 37px;
     max-width: 710px;
+    text-align: justify;
     
     p {
       margin-bottom: 10px;

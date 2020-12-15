@@ -163,7 +163,7 @@
     margin-right: 3px;
   }
   &__item-price {
-    width: 170px;
+    // width: 170px;
   }
   &__item--total {
     font-weight: normal;
@@ -173,11 +173,14 @@
 
   &__btn {
     margin-bottom: 26px;
+    font-weight: 300;
+    font-size: 16px;
   }
 
   &__info {
     font-weight: 300;
     font-size: 14px;
+    text-align: justify;
     p {
       margin-bottom: 20px;
     }

@@ -25,6 +25,7 @@
   &__info-text {
     margin-top: 37px;
     margin-right: 50px;
+    text-align: justify;
 
     p {
       margin-bottom: 30px;
@@ -73,6 +74,7 @@
 
   &__item-name {
     margin-top: 13px;
+    font-weight: 300;
   }
 }
 
@@ -99,9 +101,6 @@
       width: 100%;
 		}
 
-		&__title {
-		}
-
 		&__img-wrapper {
       margin-top: 37px;
 		}
@@ -114,6 +113,7 @@
 		}
 
 		&__info-text {
+      // text-align: justify;
 		}
 }
 
@@ -181,7 +181,7 @@
     font-weight: 300;
     font-size: 20px;
     text-transform: uppercase;
-    margin-bottom: 25px;
+    // margin-bottom: 20px;
   }
 
   &__form {
