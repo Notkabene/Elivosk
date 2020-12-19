@@ -317,6 +317,20 @@ select {
   }
 }
 
+.post-preview--zoom {
+  position: relative;
+  .post-preview__img {
+    overflow: hidden;
+    img {
+      transition: transform 0.3s;
+    }
+    &:hover img{
+      transform: scale(1.1);
+    }
+  }
+  
+}
+
 
 
 //* ~~~~~~~~ Lightgallery ~~~~~~~~
@@ -460,3 +474,13 @@ button.lg-next.lg-icon {
     }
   }
 }
+
+
+
+//Pop-up
+.fancybox-item.fancybox-close {
+  content: url(../images/icons/popup-close.svg);
+  right: -55px;
+}
+
+

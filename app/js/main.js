@@ -97,6 +97,23 @@ $(function () {
        }
        
      });
-   });
+  });
+
+  // Pop-up
+  $(".fancybox").fancybox({
+    padding: 0,
+    margin: 35,
+    closeClick: true,
+    helpers : {
+      overlay : {
+          css : {
+              'background' : 'rgba(0, 0, 0, 0.8)'
+          }
+      }
+  }
+  });
 
 })
+
+
+

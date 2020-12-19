@@ -2,6 +2,7 @@
 @import "lightgallery.min";
 @import "fullpage.min";
 @import "fonts";
+@import "jquery.fancybox";
 @import "global";
 
 
@@ -402,7 +403,7 @@
     transition: color 0.3s;
     margin-bottom: 10px;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 300;
     &:hover {
       color: #000000;
     }
@@ -640,6 +641,9 @@
 @import "cart";
 @import "product";
 @import "partnership";
+
+
+
 
 
 @import "media";
