@@ -85,9 +85,9 @@ select {
 }
 
 .container {
-  max-width: 1470px;
+  max-width: 1540px;
   width: 100%;
-  padding: 0 15px;
+  padding: 0 50px;
   margin: 0 auto;
 }
 
@@ -155,21 +155,21 @@ select {
 .burger {
   display: none;
   position: absolute;
-  top: 80px;
+  top: 62px;
   right: 100px;
   cursor: pointer;
   z-index: 200;
   
-  svg {
+  span {
     position: absolute;
     top: 0;
     left: 0;
     display: block;
+    width: 34px;
+    height: 2px;
     margin-top: 5px;
     transition: all .3s;
-    path {
-      fill: #fff;
-    }
+    background-color: #fff;
   }
   .burger-line--1 {
     top: -10px;
@@ -185,10 +185,11 @@ select {
   }
   .logo:hover {
     opacity: 0.7;
+    z-index: 1;
   }
 
-  .burger svg path {
-    fill: #000;
+  .burger span {
+    background-color: #000;
   }
   .menu__link {
     color: #000000;
@@ -228,6 +229,10 @@ select {
     }
     
   }
+  .header-social {
+    left: 50px;
+    top: 530px;
+  }
   
 }
 
@@ -236,7 +241,7 @@ select {
   display: flex;
   justify-content: space-between;
   top: 0;
-  padding: 0 25px;
+  padding: 0 50px;
   flex-wrap: wrap;
 
   &__list {
@@ -253,6 +258,10 @@ select {
     font-weight: 700;
     &:hover {
       color: #ccc;
+    }
+    &::after {
+      content: "";
+
     }
   }
 }

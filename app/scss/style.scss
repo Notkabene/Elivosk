@@ -146,6 +146,11 @@
     flex-direction: column;
   }
 
+  &__item:nth-child(5),
+  &__item:nth-child(6) {
+    display: none;
+  }
+
   &__date {
     display: block;
     margin-bottom: 7px;
@@ -175,6 +180,7 @@
       object-fit: cover;
     }
   }
+  
 }
 
 
@@ -304,6 +310,9 @@
 //* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .store-preview {
   margin-top: 137px;
+  .link-more {
+    display: none;
+  }
   &__wrapper {
     max-width: 953px;
     margin: 0 auto;
