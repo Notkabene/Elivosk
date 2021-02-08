@@ -47,6 +47,7 @@ function scripts() {
     'app/js/masonry.pkgd.min.js',
     'app/js/isotope.pkgd.min.js',
     'app/js/fullpage.min.js',
+    'app/js/slick.min.js',
     'app/js/jquery.fancybox.js',
     'app/js/main.js'
     

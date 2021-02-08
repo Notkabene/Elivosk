@@ -1,4 +1,5 @@
 $(function () {
+  
   $('.burger').on("click", function() {
 		$('.burger, .header__content').toggleClass('active');
 		$('body').toggleClass('lock');
@@ -113,7 +114,38 @@ $(function () {
   }
   });
 
+  function checkWidth() {
+    var windowWidth = $('body').innerWidth(),
+        elem = $(".photo-some"); 
+    if(windowWidth > 1025){
+      $('.photo-some').slick('unslick');
+      $('.photos-trip__items').slick('unslick');
+      sliderIsLive = false;
+    }
+    else{
+      $('.photo-some').slick({
+        dots: true,
+        arrows:false,
+      });
+      $('.photos-trip__items').slick({
+        dots: true,
+        arrows:false,
+        slidesToShow: 1,
+        // variableWidth: true
+      });
+      sliderIsLive = true;
+    }
+  }
+
+  checkWidth();
+
+  $(window).resize(function(){
+    checkWidth();
+  });
+
 })
+
+
 
 
 

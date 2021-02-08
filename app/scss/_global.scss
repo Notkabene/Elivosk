@@ -96,7 +96,14 @@ select {
   font-size: 28px;
   font-weight: normal;
 }
+.about-title--mobile {
+  display: none;
+}
 
+.image--1024,
+.image--414 {
+  display: none;
+}
 
 //* ~~~~~~~~ Section ~~~~~~~~
 .section {
@@ -390,7 +397,7 @@ button.lg-next.lg-icon {
   background-color: transparent;
 }
 .lg-outer .lg-img-wrap {
-  padding: 45px 5px;
+  padding: 45px 50px;
 }
 
 .lg-actions .lg-prev {
