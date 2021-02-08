@@ -21,25 +21,7 @@ $(function () {
 
 
   
-  //*======= Isotope =======
-  var $container = $('.grid');
-  $container.imagesLoaded(function(){
-    $container.isotope({
-      itemSelector: '.grid-item',
-      masonry: {
-        // singleMode: false,
-        // isResizable: true,
-        // gutter: 20,
-        // columnWidth: 100,
-        isAnimated: true,
-          animationOptions: {
-          queue: false,
-          duration: 500
-        }
-      }
-      
-    });
-  });
+  
 
 
   //*======= Фильтр Isotope =======
@@ -74,9 +56,6 @@ $(function () {
       'fifthPage',
       'sixth',
     ],
-    // menu:'#menu'
-    // responsiveWidth: 1023,
-    // responsiveHeight: 767
   });
 
 
@@ -86,10 +65,7 @@ $(function () {
      $container.isotope({
        itemSelector: '.grid-item',
        masonry: {
-         // singleMode: false,
-         // isResizable: true,
          gutter: 20,
-         // columnWidth: 100,
          isAnimated: true,
            animationOptions: {
            queue: false,
@@ -121,6 +97,7 @@ $(function () {
       $('.photo-some').slick('unslick');
       $('.photos-trip__items').slick('unslick');
       sliderIsLive = false;
+      
     }
     else{
       $('.photo-some').slick({
