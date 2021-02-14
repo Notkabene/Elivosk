@@ -56,6 +56,8 @@ $(function () {
       'fifthPage',
       'sixth',
     ],
+    responsiveWidth: 1025,
+
   });
 
 
@@ -96,21 +98,37 @@ $(function () {
     if(windowWidth > 1025){
       $('.photo-some').slick('unslick');
       $('.photos-trip__items').slick('unslick');
-      sliderIsLive = false;
-      
+      $('.store-polygraphy__items').slick('unslick');
+      sliderIsLive = false; 
     }
     else{
+      
       $('.photo-some').slick({
         dots: true,
         arrows:false,
       });
+
       $('.photos-trip__items').slick({
         dots: true,
         arrows:false,
         slidesToShow: 1,
-        // variableWidth: true
+      });
+      
+      $('.store-polygraphy__slider').slick({
+        dots: true,
+        arrows:false,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        responsive: [
+          {
+            breakpoint: 660,
+            settings: "unslick"
+          }
+        ]
       });
       sliderIsLive = true;
+
+      
     }
   }
 
@@ -118,6 +136,26 @@ $(function () {
 
   $(window).resize(function(){
     checkWidth();
+  });
+
+
+  $('.aside-store__title').click(function() {
+    $('.aside-store').toggleClass('active');
+  });
+
+
+  // Placeholder
+  $('.feedback__form-input').focus(function(e){
+    var $self = $(this);
+    $self.data('placeholder-tmp', $self.attr('placeholder'));
+    $self.attr('placeholder', '');
+    
+  });
+  
+  $('.feedback__form-input').blur(function(e){
+    var $self = $(this);
+    
+    $self.attr('placeholder', $self.data('placeholder-tmp'));
   });
 
 })

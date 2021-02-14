@@ -155,6 +155,10 @@ select {
   }
 }
 
+.social.social-store {
+  display: none;
+}
+
 
 
 
@@ -163,7 +167,7 @@ select {
   display: none;
   position: absolute;
   top: 62px;
-  right: 100px;
+  right: 64px;
   cursor: pointer;
   z-index: 200;
   

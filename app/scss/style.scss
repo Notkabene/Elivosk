@@ -10,7 +10,7 @@
 //* ~~~~~~~~~~~~~~~~~~~~~~~~
 .header {
   position: relative;
-  z-index: 100;
+  z-index: 999999;
   
   &__content {
     padding-top: 47px;
@@ -32,7 +32,8 @@
 //*~~~~~~~~ Social ~~~~~~~~
 //* ~~~~~~~~~~~~~~~~~~~~~~~
 .social {
-  min-width: 175px;
+  display: flex;
+  justify-content: space-between;
   &__link {
     transition: opacity 0.3s;
     display: inline-block;
@@ -247,8 +248,14 @@
 .photo-preview {
   margin-top: 148px;
   &__items {
+    max-width: 1440px;
+    margin: 0 auto;
     display: flex;
     margin-bottom: 40px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 76px);
   }
 
   &__item {
@@ -256,16 +263,6 @@
     & + .photo-preview__item {
       margin-left: 20px;
     } 
-  }
-  &__item--second {
-    display: grid;
-    
-    gap: 20px;
-    
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    'photo-1 photo-2 photo-2'
-    'photo-3 photo-3 photo-3';
   }
   
   &__link {
@@ -285,26 +282,57 @@
       object-fit: cover;
     }
   }
-  .photo-preview--1 {
+  &--1 {
     height: 100%;
-    padding-bottom: 40%;
-  }
-  .photo-preview--2 {
-    margin-top: 20px;
-    height: 100%;
-    padding-bottom: 62%;
-  }
-  .photo-preview--3 {
+    // padding-bottom: 40%;
     grid-area: photo-1;
+
+    grid-row-start: 1; 
+    grid-row-end: 4; 
+    grid-column-start: 1;   
+    grid-column-end: 4; 
   }
-  .photo-preview--4 {
-    grid-area: photo-2;
+  &--2 {
+    height: 10px;
   }
-  .photo-preview--5 {
-    grid-area: photo-3;
+  &--2 {
+    // margin-top: 20px;
     height: 100%;
+    // padding-bottom: 62%;
+    grid-area: photo-2;
+    grid-row-start: 4; 
+    grid-row-end: 9; 
+    grid-column-start: 1;   
+    grid-column-end: 4; 
+  }
+  &--3 {
+    grid-area: photo-3;
+    grid-row-start: 1; 
+    grid-row-end: 5; 
+    grid-column-start: 4;   
+    grid-column-end: 5; 
+    height: 100%;
+  }
+  &--4 {
+    grid-area: photo-4;
+    grid-row-start: 1; 
+    grid-row-end: 5; 
+    grid-column-start: 5;   
+    grid-column-end: 7; 
+    height: 100%;
+  }
+  &--5 {
+    grid-area: photo-5;
+    height: 100%;
+    grid-row-start: 5; 
+    grid-row-end: 9; 
+    grid-column-start: 4;   
+    grid-column-end: 7; 
   }
 }
+
+
+
 
 //* ~~~~~~~~ Store-preview ~~~~~~~~
 //* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
