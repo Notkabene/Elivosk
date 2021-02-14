@@ -127,6 +127,49 @@
     margin-top: 70px;
     margin-bottom: 37px;
   }
+  .cart__top {
+    max-width: 610px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .info-cart__name {
+    display: none;
+  }
+
+  .product-item {
+    height: 216px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "photo info"
+        "photo qty"
+        "photo del";
+
+  }
+  .info-cart__quantity {
+    margin: 0;
+  }
+  .product-item__img {
+    width: 100%;
+    height: 100%;
+  }
+  .product-item__name {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  .product-item__info-price {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  .product-item__info-property {
+    font-size: 15px;
+  }
+  
+
+
+
+
+
   .ordering-cart {
     max-width: 610px;
     width: 100%;
@@ -862,6 +905,7 @@
     max-width: 766px;
   }
 
+  
 
 
   
@@ -1081,7 +1125,7 @@
     flex-wrap: wrap;
     padding: 0 20px;
   } 
-  .cart {
+  .cart__link {
     margin-right: 64px;
   }
   .store__wrapper {
@@ -1106,6 +1150,33 @@
   }
   .album .grid-item {
     width: 290px;
+  }
+  .product-item {
+    // height: 138px;
+    height: auto;
+    grid-template-columns: 1fr 35%;
+    row-gap: 13px;
+  }
+  .cart__top {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+  
+  .product-item__info-property,
+  .product-item__info-price,
+  .product-item__name {
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+  .info-cart__quantity-number {
+    margin: 0 5px;
+  }.product-item__img {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 60%;
+  }
+  .product-item+.product-item {
+    margin-top: 25px;
   }
 
 }
@@ -1676,9 +1747,7 @@
     height: 258px;
     object-fit: cover;
   }
-  .cart {
-    margin-right: 47px;
-  }
+  
   .cart__link svg {
     width: 25px;
     height: 23px;
@@ -1785,6 +1854,26 @@
   }
   .products__info {
     max-width: 100%;
+  }
+  .product-item{
+    grid-template-columns: 1fr 1fr 47px;
+    align-items: center;
+    
+    grid-template-areas:
+        "photo photo photo"
+        "info qty del"
+  }
+  .product-item__info-del {
+    text-align: right;
+  }
+  .info-cart__quantity {
+    margin: 0;
+  }
+  .product-item__info-property {
+    display: none;
+  }
+  .product-item__info-price {
+    margin-bottom: 0;
   }
   
 }
