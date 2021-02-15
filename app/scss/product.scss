@@ -3,8 +3,9 @@
 .product-page {
   margin-top: 128px;
   &__wrapper {
+    display: flex;
+    flex-direction: column;
   }
-
   &__top {
     margin-top: 19px;
     display: flex;
@@ -14,20 +15,16 @@
   &__images {
     margin-top: 42px;
     margin-bottom: 103px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-right: -19px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
   &__item {
-    max-width: 710px;
     width: 100%;
-    margin-bottom: 19px;
-    margin-right: 19px;
+
   }
 
   &__img {
-    max-width: 710px;
     width: 100%;
     height: 100%;
     padding-bottom: 60%;
@@ -111,6 +108,17 @@
     display: block;
     margin-bottom: 10px;
   }
+  .color-name--mobile,
+  .size-name--mobile {
+    height: 38px;
+    border: 1px solid #000;
+    display: none;
+    font-size: 15px;
+    line-height: 1.25;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
 
   &__color-items {
     display: flex;
@@ -119,7 +127,9 @@
       width: 18px;
       height: 18px;
       margin: 0;
-      margin-right: 12px;
+      & + span {
+        margin-left: 12px;
+      }
       &::before {
         width: 22px;
         height: 22px;
@@ -128,17 +138,14 @@
     }
   }
 
-  &__size {
-  }
-
-  &__size-name {
-  }
 
   &__size-items {
     span {
-      margin-right: 13px;
       cursor: pointer;
       transition: text-shadow 0.3s;
+      & + span {
+        margin-left: 12px;
+      }
       &:hover {
         text-shadow: 0 0 0.4px, 0 0 0.4px;
       }
@@ -194,9 +201,11 @@
   &__text {
     margin-top: 27px;
     p {
-      margin-bottom: 20px;
       font-size: 14px;
       text-align: justify;
+    }
+    p + p {
+      margin-top: 20px;
     }
   }
 }
@@ -213,7 +222,6 @@
   &__items {
     display: flex;
     justify-content: space-between;
-    margin-right: -19px;
     margin-bottom: 30px;
   }
 
@@ -224,8 +232,13 @@
   .products__item {
     display: inline-block;
     margin-bottom: 0;
-    margin-right: 20px;
+    margin-right: 0;
+
+    & + .products__item {
+      margin-left: 20px;
+    }
   }
+
   .products__photo {
     max-width: 345px;
     width: 100%;

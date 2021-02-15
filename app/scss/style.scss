@@ -519,14 +519,13 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 'photo-1 photo-2 photo-2';
 
-    
   }
   .photo-preview--6 {
     grid-area: photo-1;
     height: 100%;
     
     .post-preview__img {
-      padding-bottom: 60%;
+      padding-bottom: 65%;
     }
   }
 
@@ -559,9 +558,7 @@
   &__items {
     position: relative;
   }
-
-  &__item {
-  }
+  
 
   &__img {
     display: flex;

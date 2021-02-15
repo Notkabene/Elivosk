@@ -19,6 +19,13 @@ $(function () {
 		$('.products__top-form').toggleClass('_active');
   });
 
+  $('.color-name--mobile').on("click", function() {
+		$('.product-buy__color').toggleClass('_active');
+  });
+  $('.size-name--mobile').on("click", function() {
+		$('.product-buy__size').toggleClass('_active');
+  });
+
 
   
   
@@ -99,6 +106,7 @@ $(function () {
       $('.photo-some').slick('unslick');
       $('.photos-trip__items').slick('unslick');
       $('.store-polygraphy__items').slick('unslick');
+      $('.product-page__images').slick('unslick');
       sliderIsLive = false; 
     }
     else{
@@ -109,6 +117,12 @@ $(function () {
       });
 
       $('.photos-trip__items').slick({
+        dots: true,
+        arrows:false,
+        slidesToShow: 1,
+      });
+
+      $('.product-page__images').slick({
         dots: true,
         arrows:false,
         slidesToShow: 1,
